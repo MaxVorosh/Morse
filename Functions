@@ -1,0 +1,17 @@
+def encode_to_morse(text):
+    global MorseCode
+    s = ''
+    for i in text:
+        if not(i in MorseCode.keys()):
+            return False
+        s += MorseCode[i]
+    return s
+
+
+def main():
+    text = input('Введите текст\n')
+    ans = encode_to_morse(text)
+    if ans:
+        print(text)
+    else:
+        print('Вы ввели символ, не предусмотренный азбукой Морзе')

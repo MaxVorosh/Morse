@@ -16,6 +16,6 @@ def main():
     else:
         ans = decode_from_morse(text)
     if ans:
-        print(text)
+        print(ans)
     else:
         print('Вы ввели символ, не предусмотренный азбукой Морзе')

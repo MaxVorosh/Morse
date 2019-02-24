@@ -9,8 +9,12 @@ def encode_to_morse(text):
 
 
 def main():
+    fl = input('Введите 1, если вы хотите закодировать текст, 0 - если раскодировать')
     text = input('Введите текст\n')
-    ans = encode_to_morse(text)
+    if fl:
+        ans = encode_to_morse(text)
+    else:
+        ans = decode_from_morse(text)
     if ans:
         print(text)
     else:
